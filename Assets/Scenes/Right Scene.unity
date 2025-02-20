@@ -13378,6 +13378,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 426715130103460989, guid: e974c119574effe4fbfd36369ca124f5,
+        type: 3}
+      propertyPath: SceneLoad
+      value: Middle Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 426715130103460989, guid: e974c119574effe4fbfd36369ca124f5,
+        type: 3}
+      propertyPath: SpawnPoint
+      value: DocsEnter
+      objectReference: {fileID: 0}
     - target: {fileID: 1788010368008465966, guid: e974c119574effe4fbfd36369ca124f5,
         type: 3}
       propertyPath: m_LocalPosition.x

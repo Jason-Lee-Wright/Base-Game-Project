@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa3a3cf9c1b99242adb861656016104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 2138898600}
   Spawnpoint: {fileID: 0}
 --- !u!1 &750672286
 GameObject:
@@ -1302,6 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 795139526}
+  Player: {fileID: 2138898600}
 --- !u!114 &795139528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2763,6 +2764,12 @@ Transform:
   - {fileID: 1407710196}
   m_Father: {fileID: 1926758743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2138898600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8065486309713290322, guid: dbba95e0bdc48a14091b90363150e999,
+    type: 3}
+  m_PrefabInstance: {fileID: 936674621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
