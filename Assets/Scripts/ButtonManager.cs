@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static GameStateManager;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ButtonManager : MonoBehaviour
 
     public void PlayB()
     {
+        SceneManager.LoadScene("Left Scene");
+        
         gameManager.StateManager.ChangeState(GameState.Gameplay_State);
     }
 
@@ -17,13 +20,10 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void PauseB()
-    {
-        gameManager.StateManager.ChangeState(GameState.Paused_State);
-    }
-
     public void MainMenuB()
     {
+        SceneManager.LoadScene("Main Menu");
+
         gameManager.StateManager.ChangeState(GameState.MainMenu_State);
     }
 

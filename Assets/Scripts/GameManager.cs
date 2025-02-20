@@ -6,28 +6,4 @@ public class GameManager : MonoBehaviour
 {
     public GameStateManager StateManager;
     public UIManager UIManager;
-
-    public void DontDestroy()
-    {
-        GameObject.DontDestroyOnLoad(this.gameObject);
-    }
-}
-
-public class Singleton : MonoBehaviour
-{
-    static Singleton instance;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (instance != null)
-        {
-            GameObject.Destroy(gameObject);
-        }
-        else
-        {
-            GameObject.DontDestroyOnLoad(gameObject);
-            instance = this;
-        }
-    }
 }

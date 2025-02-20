@@ -74,7 +74,7 @@ public class GameStateManager : MonoBehaviour
 
                 gameManager.UIManager.EnableMainMenu();
 
-                Time.timeScale = 1;
+                Time.timeScale = 0;
                 break;
 
             case GameState.Gameplay_State:
