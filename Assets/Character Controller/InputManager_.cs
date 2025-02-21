@@ -35,7 +35,7 @@ public class InputManager : MonoBehaviour, GamePlay.IPlayerActions
 
     public void OnSprint(InputAction.CallbackContext context)
     {
-        if (context.started || context.canceled || context.performed)
+        if (context.started || context.canceled)
         {
             InputActions.SprintEvent.Invoke();
         }

@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             MoveSpeed = SprintSpeed; 
         }
-        else if (IsSprinting)
+        else if (!IsSprinting)
         {
             MoveSpeed = WalkSpeed;
         }
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         {
             IsSprinting = true;
         }
-        else
+        else if (IsSprinting ==  true)
         {
             IsSprinting = false;
         }
