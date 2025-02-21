@@ -35,4 +35,14 @@ public class ButtonManager : MonoBehaviour
     {
         gameManager.StateManager.ChangeState(GameState.Gameplay_State);
     }
+
+    public void OptionsB()
+    {
+        gameManager.StateManager.ChangeState(GameState.Options_State);
+    }
+
+    public void ReturnB()
+    {
+        gameManager.StateManager.ChangeState(GameState.MainMenu_State);
+    }
 }

@@ -32,6 +32,14 @@ public class InputManager : MonoBehaviour, GamePlay.IPlayerActions
             InputActions.InteractEvent.Invoke();
         }
     }
+
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        if (context.started || context.canceled)
+        {
+            InputActions.SprintEvent.Invoke(context.ReadValue<float>());
+        }
+    }
 }
 
 
@@ -39,6 +47,8 @@ public class InputManager : MonoBehaviour, GamePlay.IPlayerActions
 public static class InputActions
 {
     public static Action<Vector2> MoveEvent;
+
+    public static Action<float> SprintEvent;
 
     public static Action InteractEvent;
 }

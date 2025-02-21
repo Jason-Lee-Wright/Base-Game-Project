@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
@@ -37,16 +38,23 @@ public class PlayerMovement : MonoBehaviour
     {
         RigidBody.MovePosition(RigidBody.position + (currentMoveDirection * MoveSpeed * Time.fixedDeltaTime));
     }
+
+    void SprintSpeed(float Srint)
+    {
+
+    }
    
     private void OnEnable()
     {
         // Subscribe to the MoveEvent
         InputActions.MoveEvent += UpdateMoveDirection;
+        InputActions.SprintEvent += SprintSpeed;
     }
 
     private void OnDisable()
     {
         // Unsubscribe to MoveEvent
         InputActions.MoveEvent -= UpdateMoveDirection;
+        InputActions.SprintEvent -= SprintSpeed;
     }
 }

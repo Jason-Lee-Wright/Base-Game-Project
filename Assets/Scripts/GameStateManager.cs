@@ -11,7 +11,8 @@ public class GameStateManager : MonoBehaviour
     {
         MainMenu_State,
         Gameplay_State,
-        Paused_State      
+        Paused_State,
+        Options_State
     }
 
     public GameState currentState { get; private set; }
@@ -39,11 +40,6 @@ public class GameStateManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            ChangeState(GameState.MainMenu_State);
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape) && (currentState == GameState.Gameplay_State || currentState == GameState.Paused_State))
         {
             if (currentState == GameState.Paused_State)
@@ -54,11 +50,6 @@ public class GameStateManager : MonoBehaviour
             {
                 ChangeState(GameState.Paused_State);
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            ChangeState(GameState.Gameplay_State);
         }
     }
 
@@ -95,6 +86,17 @@ public class GameStateManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
 
                 gameManager.UIManager.EnablePause();
+
+                Time.timeScale = 0;
+                break;
+
+            case GameState.Options_State:
+                Debug.Log("Switched to Options State");
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+
+                gameManager.UIManager.EnableOptions();
 
                 Time.timeScale = 0;
                 break;
