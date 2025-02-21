@@ -43,6 +43,6 @@ public class ButtonManager : MonoBehaviour
 
     public void ReturnB()
     {
-        gameManager.StateManager.ChangeState(GameState.MainMenu_State);
+        gameManager.StateManager.ChangeState(gameManager.StateManager.LastState);
     }
 }

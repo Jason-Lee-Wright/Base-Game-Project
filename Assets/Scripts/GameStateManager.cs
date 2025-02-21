@@ -20,6 +20,8 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string currentStateDebug;
     [SerializeField] private string lastStateDebug;
 
+    public GameState LastState;
+
     private void Start()
     {
         ChangeState(GameState.MainMenu_State);
@@ -28,6 +30,7 @@ public class GameStateManager : MonoBehaviour
     public void ChangeState(GameState newState)
     {
         lastStateDebug = currentState.ToString();
+        LastState = currentState;
 
         currentState = newState;
 
